@@ -1,0 +1,69 @@
+install a hot new plone4
+========================
+
+create an working directory
+$ cd
+$ mkdir wpd10
+$ cd wpd10
+
+have python2.6 and virtualenv installed and initialize an vanilla python
+distribution which doesn't come into the way of your system python distribution
+$ virtualenv --no-site-packages python
+
+check out the world plone day example buildout:
+$ git clone git@github.com:thet/thet.wpd10.buildout.git thet.wpd10.buildout
+$ cd thet.wpd10.buildout
+
+check out a recent plone4 buildout which is extended by our example buildout
+$ svn co https://svn.plone.org/svn/plone/buildouts/plone-coredev/branches/4.0/ plone4.0
+
+run:
+$ ../python/bin/python bootstrap.py --distribute
+this uses the more modern distribute packaging tools http://packages.python.org/distribute/ instead of setuptools
+
+run:
+$ ./bin/buildout
+and relax...
+
+run:
+$ ./bin/instance fg
+to start the zope instance in foreground, so you can see the log messages
+
+point your browser to:
+http://localhost:8080/
+and create a new plone instance
+
+
+to install the deliverance theming product ...
+==============================================
+
+run or re-run the buildout as follows:
+$ ./bin/buildout -c deliverance.cfg
+
+
+
+
+
+general info
+============
+
+create a git project
+--------------------
+1) create the project on github.com
+2) run:
+
+git init
+git remote add origin git@github.com:thet/thet.wpd10.buildout.git
+git config branch.master.merge refs/heads/master
+git config branch.master.remote origin
+
+get an recent bootstrap.py file
+-------------------------------
+bootstrap.py repository:
+    - http://svn.zope.org/zc.buildout/trunk/bootstrap/bootstrap.py
+to directly check it out:
+    - http://svn.zope.org/*checkout*/zc.buildout/trunk/bootstrap/bootstrap.py
+zc.buildout on pypi:
+    - http://pypi.python.org/pypi/zc.buildout
+
+#
