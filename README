@@ -11,7 +11,7 @@ distribution which doesn't come into the way of your system python distribution
 $ virtualenv --no-site-packages python
 
 check out the world plone day example buildout:
-$ git clone git@github.com:thet/thet.wpd10.buildout.git thet.wpd10.buildout
+$ git clone git://github.com/thet/thet.wpd10.buildout.git thet.wpd10.buildout
 $ cd thet.wpd10.buildout
 
 check out a recent plone4 buildout which is extended by our example buildout
