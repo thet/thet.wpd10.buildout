@@ -41,9 +41,6 @@ run or re-run the buildout as follows:
 $ ./bin/buildout -c deliverance.cfg
 
 
-
-
-
 general info
 ============
 
