@@ -31,7 +31,8 @@ to start the zope instance in foreground, so you can see the log messages
 
 point your browser to:
 http://localhost:8080/
-and create a new plone instance
+and create a new plone instance with the id "wpd" (name it "wpd" to use it
+later on with deliverance...)
 
 
 to install the deliverance theming product ...
